@@ -6,6 +6,12 @@ public class Bullet : MonoBehaviour
 {
     public float life = 3;
 
+    void Start()
+    {
+        gameObject.tag = "Destructable";
+    }
+
+
     void Awake()
     {
         Destroy(gameObject, life);
@@ -13,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
+        //(collision.gameObject);
         Destroy(gameObject);
     }
 }
