@@ -2,29 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Bullet : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
-    public float life = 3;
 
     void Start()
     {
-        gameObject.tag = "Destructable";
+
     }
 
 
     void Awake()
     {
-       Destroy(gameObject, life);
+       Destroy(gameObject);
     }
 
     void OnCollisionEnter(Collision other)
     {
         Destroy(gameObject);
 
-        if(other.gameObject.CompareTag("Destructable"))
+        if(other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            Health -= 10;
         }
+    }
+
+    static float Health;
+    static float MaxHealth = 100;
+
+    public Slider HealthBar;
+
+    private void Start()
+    {
+        HealthBar.minValue = 0;
+        HealthBar.maxValue = MaxHealth;
+        Health = MaxHealth;
+    }
+
+    private void Update()
+    {
+        HealthBar.value = Health;
+        Damage();
     }
 }
