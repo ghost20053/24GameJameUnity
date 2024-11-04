@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseEnding.unity
     guid: d979a0fe715f85d4498740f5397228fa
+  - enabled: 1
+    path: Assets/Scenes/Lore.unity
+    guid: d9ed30cca6acbd3478074f6c8ce38302
+  - enabled: 1
+    path: Assets/Scenes/Holden.unity
+    guid: fc75d9d1ba4b0434cabc5de5c9a00c0a
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: d916fa7290729194993630db97fe89eb
   m_configObjects: {}
