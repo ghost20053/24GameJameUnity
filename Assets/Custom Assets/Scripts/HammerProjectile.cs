@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        gameObject.tag = "Destructable";
+
     }
 
 
     void Awake()
     {
-        Destroy(gameObject, life);
+       // Destroy(gameObject, life);
     }
 
     void OnCollisionEnter(Collision collision)
