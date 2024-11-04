@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
 
     //patroling
     public Vector3 walkPoint;
@@ -104,16 +103,15 @@ public class Enemy : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDame(int damage)
-    {
-        health -=   damage;
-
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 5f);
-    }
-
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+
+    void HammerHitCheck()
+    {
+        //Ray rayFrom = new R
     }
 
     private void OnDrawGizmoSelected()
