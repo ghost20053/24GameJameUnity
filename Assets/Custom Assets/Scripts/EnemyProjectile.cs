@@ -7,12 +7,6 @@ using UnityEngine.UI;
 public class EnemyProjectile : MonoBehaviour
 {
 
-    void Start()
-    {
-
-    }
-
-
     void Awake()
     {
        Destroy(gameObject);
