@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Damage()
     {
-        if (gameObject.tag = "Arrow");
+        if(Input.GetKeyDown(KeyCode.Space)) 
         {
             Health -= 10;
         }

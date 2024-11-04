@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public PlayerHealth health;
 
     //patroling
     public Vector3 walkPoint;
