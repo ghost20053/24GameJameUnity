@@ -20,11 +20,11 @@ public class PlayerHealth : MonoBehaviour
     private void Update()
     {
         HealthBar.value = Health;
-        Damage();
+        DamageOnHit();
     }
 
 
-    void Damage()
+    void DamageOnHit()
     {
         if(Input.GetKeyDown(KeyCode.Space)) 
         {
