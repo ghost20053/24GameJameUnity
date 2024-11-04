@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Rune : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -33,13 +33,10 @@ public class Enemy : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
     }
 
     private void Awake()
     {
-        player = GameObject.Find("FPSController").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -66,59 +63,15 @@ public class Enemy : MonoBehaviour
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
-        { 
+        {
             walkPointSet = true;
-    
+
         }
-}
 
-    private void ChasePlayer()
-    {
-        agent.SetDestination(player.position);
-    }
-    private void AttackPlayer()
-    {
-        //make sure enemy doesn't move
-        agent.SetDestination(transform.position);
+        // Start is called before the first frame update
+       // void Start()
+        //{
 
-        transform.LookAt(player);
-
-        if (!alreadyAttacked) 
-        { 
-            //Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 1f, ForceMode.Impulse);
-
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
-    }
-
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
-
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-    }
-
-
-
-    private void OnDrawGizmoSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, sightRange);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+       // }
     }
 }
