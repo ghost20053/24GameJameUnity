@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class EnemyProjectile : MonoBehaviour
 {
+    static float Health;
+    static float MaxHealth = 100;
+
+    public Slider HealthBar;
 
     void Awake()
     {
@@ -21,11 +25,6 @@ public class EnemyProjectile : MonoBehaviour
             Health -= 10;
         }
     }
-
-    static float Health;
-    static float MaxHealth = 100;
-
-    public Slider HealthBar;
 
     private void Start()
     {
