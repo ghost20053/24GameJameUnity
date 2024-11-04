@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    public int barrels =0;
+    public int crates = 0;
+    public int stalls = 0;
     // Start is called before the first frame update
     void Start()
     {
