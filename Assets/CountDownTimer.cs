@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CountDownTimer : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class CountDownTimer : MonoBehaviour
         }
         else if (remainingTime < 0) 
         {
-            remainingTime = 0;       
+            remainingTime = 0; 
+            SceneManager.LoadScene("LoseEnding");
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
