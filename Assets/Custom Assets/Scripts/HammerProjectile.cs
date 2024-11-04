@@ -7,7 +7,6 @@ public class Bullet : MonoBehaviour
 {
     public float life = 3;
 
-
     void Start()
     {
         gameObject.tag = "Destructable";
