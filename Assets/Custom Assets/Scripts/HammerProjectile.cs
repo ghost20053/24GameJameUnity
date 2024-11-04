@@ -6,12 +6,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float life = 3;
-    public GameObject Enemy;
 
 
     void Start()
     {
-
+        gameObject.tag = "Destructable";
     }
 
 
@@ -20,10 +19,13 @@ public class Bullet : MonoBehaviour
        Destroy(gameObject, life);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
-           Destroy(gameObject);
+        Destroy(gameObject);
 
-        //HealthBar(TakeDamage);
+        if(other.gameObject.CompareTag("Destructable"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
