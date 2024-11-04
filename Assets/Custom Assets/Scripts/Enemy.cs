@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public Bullet bullet;
-
 
     //patroling
     public Vector3 walkPoint;
