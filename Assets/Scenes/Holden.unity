@@ -1206,11 +1206,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3690195450293333566, guid: 03dafe1bb4ec34b4380f2f2b0b8f292e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 4070662085599523972, guid: 03dafe1bb4ec34b4380f2f2b0b8f292e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2470,7 +2465,7 @@ PrefabInstance:
     - target: {fileID: 3351069946092495261, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
       propertyPath: m_Name
-      value: Runic 1 (1)
+      value: Runic 2
       objectReference: {fileID: 0}
     - target: {fileID: 3413035164960009337, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
@@ -2480,7 +2475,7 @@ PrefabInstance:
     - target: {fileID: 3413035164960009337, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.179
+      value: 2.808
       objectReference: {fileID: 0}
     - target: {fileID: 3413035164960009337, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
@@ -2862,7 +2857,7 @@ GameObject:
   - component: {fileID: 829278148}
   - component: {fileID: 829278147}
   - component: {fileID: 829278146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3921,12 +3916,12 @@ PrefabInstance:
     - target: {fileID: 3413035164960009337, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.875829
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 3413035164960009337, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 3413035164960009337, guid: 493e2fdbf1d3d324caf94568b4811ec3,
         type: 3}
@@ -7227,7 +7222,7 @@ GameObject:
   - component: {fileID: 1847726602}
   - component: {fileID: 1847726601}
   - component: {fileID: 1847726604}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
