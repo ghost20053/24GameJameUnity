@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float life = 3;
+    public GameObject Enemy;
+
 
     void Start()
     {
@@ -14,12 +17,13 @@ public class Bullet : MonoBehaviour
 
     void Awake()
     {
-       // Destroy(gameObject, life);
+       Destroy(gameObject, life);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        //(collision.gameObject);
-        Destroy(gameObject);
+           Destroy(gameObject);
+
+        //HealthBar(TakeDamage);
     }
 }

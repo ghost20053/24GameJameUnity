@@ -109,10 +109,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-    void HammerHitCheck()
-    {
-        //Ray rayFrom = new R
-    }
 
     private void OnDrawGizmoSelected()
     {
