@@ -6,12 +6,12 @@ public class Area1BoolScript : MonoBehaviour
 {
     //public LevelTriggerKitchen levelTriggerKitchen;
 
-    public bool HasObject1;
+    public bool HasRunic1;
     public bool HasObject2;
     public bool HasObject3;
 
 
-    public GameObject Object1InHand;
+    public GameObject Runic1InHand;
     public GameObject Object2InHand;
     public GameObject Object3InHand;
 
@@ -19,11 +19,10 @@ public class Area1BoolScript : MonoBehaviour
 
     void Start()
     {
-        HasObject1 = false;
+        HasRunic1 = false;
         HasObject2 = false;
         HasObject3 = true;
 
-        gameObject.tag = "Barrier";
     }
     
     
@@ -31,14 +30,14 @@ public class Area1BoolScript : MonoBehaviour
     private void Update()
     {
 
-        if (HasObject1)
+        if (HasRunic1)
         {
-            Object1InHand.SetActive(true);
+            Runic1InHand.SetActive(true);
 
         }
-        else if (!HasObject1)
+        else if (!HasRunic1)
         {
-            Object1InHand.SetActive(false);
+            Runic1InHand.SetActive(false);
         }
 
         if (HasObject2)
