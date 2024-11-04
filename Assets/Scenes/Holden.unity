@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 317115413}
   - component: {fileID: 317115412}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score
+  m_text: 'Score:
 
 '
   m_isRightToLeft: 0
